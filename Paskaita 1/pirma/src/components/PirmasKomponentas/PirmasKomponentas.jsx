@@ -1,19 +1,17 @@
 import React from "react";
+import "./PirmasKomponentas.css";
 import AntrasKomponentas from "../AntrasKomponentas/AntrasKomponentas";
 
 export default function PirmasKomponentas() {
-  let age = 20;
-
-  function handleClick() {
-    age++;
-    console.log(age);
-  }
-
   return (
-    <div>
-      <h1>{age + 10}</h1>
+    <header>
+      <div>
+        <button type="#Home">Home</button>
+        <button type="#Information">Information</button>
+        <button type="#Contact">Contact</button>
+      </div>
+
       <AntrasKomponentas />
-      <button onClick={handleClick}>Click Me</button>
-    </div>
+    </header>
   );
 }
