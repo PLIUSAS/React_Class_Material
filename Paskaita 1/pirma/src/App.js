@@ -1,3 +1,4 @@
+// npx create-react-app
 import logo from "./logo.svg";
 import "./App.css";
 import PirmasKomponentas from "./components/PirmasKomponentas/PirmasKomponentas";
