@@ -1,0 +1,11 @@
+footer {
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+  background-color: rgb(255, 138, 84);
+  padding: 15px;
+  color: white;
+}
+.footer > p:last-child {
+  margin-bottom: 0;
+}
