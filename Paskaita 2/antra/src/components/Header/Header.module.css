@@ -26,3 +26,7 @@
   border: rgb(9, 190, 130) 1px solid;
   background-color: rgb(9, 190, 130);
 }
+.header > button:hover {
+  cursor: pointer;
+  color: white;
+}
