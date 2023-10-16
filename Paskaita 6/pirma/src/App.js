@@ -1,5 +1,6 @@
 import "./App.css";
 import Posts from "./components/Posts/Posts";
+import Darbas from "./components/Darbas/Darbas";
 // UseEffect Pamoka //
 // UseEffect Pamoka //
 // UseEffect Pamoka //
@@ -7,7 +8,8 @@ import Posts from "./components/Posts/Posts";
 function App() {
   return (
     <div>
-      <Posts />
+      {/* <Posts /> */}
+      <Darbas />
     </div>
   );
 }
