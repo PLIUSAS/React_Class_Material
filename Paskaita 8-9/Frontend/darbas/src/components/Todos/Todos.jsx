@@ -36,13 +36,20 @@ export default function Todos() {
     }
   }, [descriptionInput]);
 
-  function handleSubmit() {
-    setTodos((prev) => [
-      { name: nameInput, description: descriptionInput },
-      ...prev,
-    ]);
-    setNameInput("");
-    setDescriptionInput("");
+  async function handleSubmit() {
+    if (isNameValid && isDescriptionValid) {
+      try {
+        await axios.post(ENDPOINT, {
+          name: nameInput,
+          description: descriptionInput,
+        });
+        getTodos();
+        setNameInput("");
+        setDescriptionInput("");
+      } catch (error) {
+        console.error("Error adding todo:", error);
+      }
+    }
   }
 
   const getTodos = async () => {
@@ -52,6 +59,7 @@ export default function Todos() {
   useEffect(() => {
     getTodos();
   }, []);
+
   return (
     <div>
       <form>
@@ -79,6 +87,7 @@ export default function Todos() {
           Submit
         </button>
       </form>
+      <button>One Todos</button>
       <table>
         <thead>
           <tr>
@@ -88,7 +97,7 @@ export default function Todos() {
         </thead>
         <tbody>
           {todo.map((todo) => (
-            <tr>
+            <tr key={todo.id}>
               <th>{todo.name}</th>
               <td>{todo.description}</td>
             </tr>
