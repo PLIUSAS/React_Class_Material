@@ -69,7 +69,7 @@ export default function Posts() {
           Submit
         </button>
       </div>
-      {posts.lenght === 0 ? (
+      {posts.length === 0 ? (
         <h1>loading...</h1>
       ) : (
         posts.map((post) => <Post title={post.title} body={post.body} />)
