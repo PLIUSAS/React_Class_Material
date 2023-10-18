@@ -69,7 +69,7 @@ export default function Todos() {
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
           type="text"
-        />{" "}
+        />
         <br />
         <label htmlFor="">Description</label> <br />
         {!isDescriptionValid && <p>Description not valid</p>}
