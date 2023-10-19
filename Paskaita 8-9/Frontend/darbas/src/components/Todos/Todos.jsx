@@ -63,7 +63,10 @@ export default function Todos() {
   return (
     <div>
       <form>
-        <label htmlFor="">Name</label> <br />
+        <label htmlFor="">
+          <b>Name</b>
+        </label>
+        <br />
         {!isNameValid && <p>Name not valid</p>}
         <input
           value={nameInput}
@@ -71,7 +74,10 @@ export default function Todos() {
           type="text"
         />
         <br />
-        <label htmlFor="">Description</label> <br />
+        <label htmlFor="">
+          <b>Description</b>
+        </label>{" "}
+        <br />
         {!isDescriptionValid && <p>Description not valid</p>}
         <input
           value={descriptionInput}
