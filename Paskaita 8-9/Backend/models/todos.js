@@ -13,6 +13,14 @@ const todoSchema = new mongoose.Schema({
     minlength: 0,
     maxlength: 15,
   },
+  dateOfCreation: {
+    type: Date,
+    default: Date.now,
+  },
+  isFinished: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default mongoose.model("Todo", todoSchema);
