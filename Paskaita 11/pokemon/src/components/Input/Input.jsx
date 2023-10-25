@@ -4,7 +4,7 @@ import axios from "axios";
 export default function Input({ setPokemon }) {
   const [input, setInput] = useState("");
 
-  const POKEMON_HOST = process.env.REACT_APP_POKEMON_HOST;
+  const POKEMON_HOST = "https://pokeapi.co/api/v2/pokemon";
 
   async function getPokemon() {
     try {
