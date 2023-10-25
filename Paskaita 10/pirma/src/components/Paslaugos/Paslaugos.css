@@ -1,0 +1,13 @@
+.paslaugos {
+  display: grid;
+  gap: 1rem;
+}
+.meniu {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.meniu div {
+  width: 400px;
+  height: 300px;
+}

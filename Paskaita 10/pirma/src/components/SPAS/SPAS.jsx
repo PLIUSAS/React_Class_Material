@@ -13,7 +13,6 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(236, 253, 2))",
           }}
           to={"/Pagrindinis"}
         >
@@ -28,7 +27,6 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(2, 253, 98))",
           }}
           to={"/Apiemus"}
         >
@@ -43,7 +41,6 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(253, 2, 2))",
           }}
           to={"/Naujienos"}
         >
@@ -58,7 +55,6 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(236, 253, 2))",
           }}
           to={"/Paslaugos"}
         >
@@ -73,7 +69,6 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(2, 253, 98))",
           }}
           to={"/AtliktiDarbai"}
         >
@@ -88,14 +83,13 @@ export default function SPAS() {
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "black",
-            filter: "drop-shadow(0.1rem 0.1rem 0.7rem rgb(253, 2, 2))",
           }}
           to={"/Kontaktai"}
         >
           Kontaktai
         </Link>
       </main>
-      <p>!! Visos teisės saugomos !!</p>
+      <p> &copy; All rights reserved !!</p>
     </footer>
   );
 }

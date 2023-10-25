@@ -1,0 +1,11 @@
+table {
+  border: 1px solid black;
+  margin: auto;
+}
+table thead th {
+  border: 1px solid black;
+}
+table tbody td {
+  padding: 0.5rem 0.5rem;
+  border: 1px solid black;
+}
