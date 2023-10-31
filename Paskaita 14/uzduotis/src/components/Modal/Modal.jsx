@@ -1,16 +1,24 @@
 import React from "react";
 import { createPortal } from "react-dom";
-import styles from "./Modal.module.css";
+import ShoppingCartProduct from "../ShoppingCartProduct/ShoppingCartProduct";
 
-export default function Modal({ open, children, title }) {
-  if (!open) {
+export default function Modal({ isOpen, shoppingCart = [], setShoppingCart }) {
+  if (!isOpen) {
     return null;
   }
+
+  const total = shoppingCart.reduce((acc, pr) => acc + pr.price * pr.amount, 0);
+
   return createPortal(
-    <div className={styles.modal}>
-      <h2>{title}</h2>
-      {children}
-      <button>Buy</button>
+    <div>
+      {shoppingCart.map((product) => (
+        <ShoppingCartProduct
+          product={product}
+          key={`shoppingCartItem${product.id}`}
+          setShoppingCart={setShoppingCart}
+        />
+      ))}
+      <p>Total: {total}</p>
     </div>,
     document.body
   );

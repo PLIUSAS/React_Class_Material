@@ -1,39 +1,35 @@
-import "./App.css";
-import ItemsList from "./components/ItemsList/ItemsList";
 import { useState } from "react";
+import "./App.css";
 import Modal from "./components/Modal/Modal";
+import ProductList from "./components/ProductList/ProductList";
+const products = [
+  {
+    id: 1,
+    name: "Product 1",
+    price: 100,
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    price: 200,
+  },
+];
 
 function App() {
-  const [cart, setCart] = useState([]);
-  const [Open, setOpen] = useState(true);
-  function handleButtonClick() {
-    setOpen((prev) => !prev);
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   return (
-    <div>
-      <div className="App">
-        <ItemsList setCart={setCart} Cart={cart} />
-        <Modal open={Open} cart={cart} setCart={setCart}>
-          {cart.map((item) => (
-            <p key={item.id}>
-              Preke: {item.name} kaina: {item.price} kiekis: {item.quantity}{" "}
-              suma: {item.quantity * item.price}
-              <button
-                onClick={() =>
-                  setCart((cart) => cart.filter((item) => !item.id))
-                }
-              >
-                Pasalinti
-              </button>
-            </p>
-          ))}
-          <h6>Suma: {cart.reduce((a, b) => a + b.quantity * b.price, 0)}</h6>
-          <button>Pasalinti preke</button>
-        </Modal>
-      </div>
-      <button onClick={handleButtonClick}>Krepselis</button>
-      <button onClick={() => setCart([])}>Valyti krepseli</button>
+    <div className="App">
+      <button onClick={() => setIsModalOpen((prev) => !prev)}>
+        Shopping cart
+      </button>
+      <ProductList products={products} setShoppingCart={setShoppingCart} />
+      <Modal
+        isOpen={isModalOpen}
+        shoppingCart={shoppingCart}
+        setShoppingCart={setShoppingCart}
+      />
     </div>
   );
 }
