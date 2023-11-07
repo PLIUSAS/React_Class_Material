@@ -50,6 +50,8 @@ export async function getUser(req, res) {
   try {
     const users = await User.find({});
 
+    console.log(req.userId);
+
     res.status(200).json({ users });
   } catch (error) {
     res.status(401).json({ message: "Invalid token" });
