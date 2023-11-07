@@ -1,0 +1,12 @@
+.container {
+  margin: 1rem;
+}
+.normal {
+  font-weight: normal;
+}
+label {
+  font-weight: bold;
+}
+.blue {
+  color: blue;
+}

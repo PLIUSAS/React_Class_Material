@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./TextInput.module.css";
 
 export default function TextInput() {
   const [input, setInput] = useState("");
@@ -7,6 +8,7 @@ export default function TextInput() {
   return (
     <div>
       <input
+        className={styles.input}
         minLength={5}
         maxLength={20}
         type="text"
