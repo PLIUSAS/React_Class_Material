@@ -1,0 +1,43 @@
+.RegistrationForm {
+  padding: 0.5rem 1rem;
+}
+h6 {
+  margin: 0;
+}
+h6 a {
+  color: rgb(255, 123, 0);
+  text-decoration: none;
+}
+h2 {
+  margin-bottom: 5px;
+}
+h5 {
+  margin: 0;
+}
+p {
+  margin: 0;
+  text-align: center;
+}
+.button,
+.button1 {
+  padding: 0.3rem 1.7rem;
+  margin: 0.2rem;
+  text-align: center;
+  border: 1px solid gray;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button span img {
+  width: 0.7rem;
+}
+.button {
+  background-color: white;
+}
+.button1 {
+  color: white;
+  background-color: rgb(13, 13, 216);
+}
+.button span,
+.button1 span {
+  padding: 5px;
+}
