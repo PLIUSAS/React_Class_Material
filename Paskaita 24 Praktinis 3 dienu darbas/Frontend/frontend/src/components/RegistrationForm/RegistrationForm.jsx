@@ -17,13 +17,16 @@ export default function RegistrationForm() {
             alt="Google Logo"
           />
         </span>
-        sing up
+        <a href="https://www.instagram.com/accounts/emailsignup/">sing up</a>
       </button>
       <button className={style.button1}>
         <span>
-          <i class="fa-brands fa-facebook"></i>
+          <img
+            src="https://freelogopng.com/images/all_img/1692797523facebook-logo-png-white.png"
+            alt="Facebook Logo"
+          />
         </span>
-        sing up
+        <a href="https://www.facebook.com/">sing up</a>
       </button>
       <p>Or</p>
       <Form />
