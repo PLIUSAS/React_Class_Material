@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import Button from "../SingButton/Button";
 import style from "./Form.module.css";
 
 export default function Form() {
