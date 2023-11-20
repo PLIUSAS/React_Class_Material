@@ -6,7 +6,7 @@ import router from "./router.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const MONGO_URL = process.env.MONGO_URL;
 
 mongoose
@@ -20,7 +20,7 @@ mongoose
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // KAD POST VEIKTU JEIGU BUS
+app.use(express.json());
 
 app.use(router);
 app.listen(PORT, () => {

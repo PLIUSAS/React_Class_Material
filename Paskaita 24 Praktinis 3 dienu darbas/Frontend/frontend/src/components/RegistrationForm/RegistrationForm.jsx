@@ -48,21 +48,6 @@ export default function RegisterForm({ open, setOpen }) {
     } catch (error) {
       return alert(error.message);
     }
-
-    // const validate = () => {
-    //   if (!validEmail.test(Email)) {
-    //      return alert("Email is not valid")
-    //   }
-    //   if (!validPassword.test(Password)) {
-    //      return alert("Password is not valid")
-    //   }
-
-    // if (!validEmail.test(Email)) {
-    //   return alert("Email is not valid");
-    // }
-    // if (!validPassword.test(Password)) {
-    //   return alert("Password is not valid");
-    // }
   }
   return (
     <div className={styles.registerForm}>

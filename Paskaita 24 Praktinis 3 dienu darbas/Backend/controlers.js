@@ -63,7 +63,7 @@ export async function register(req, res) {
     console.log(error);
     res.json({
       success: false,
-      message: "Internal server error",
+      message: error.message,
     });
   }
 }
